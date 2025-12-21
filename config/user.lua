@@ -62,9 +62,9 @@ return {
    -- Most systemd distros need not prepend anything to the {poweroff,reboot,suspend}
    -- commands, but distros not using systemd must use a polkit or other methods to access
    -- these. Some systemd distros also require prepending `systemctl` as user.
-   shutdown_cmd = 'loginctl poweroff',
-   reboot_cmd   = 'loginctl reboot',
-   suspend_cmd  = 'loginctl suspend',
+   shutdown_cmd = 'systemctl poweroff',
+   reboot_cmd   = 'systemctl reboot',
+   suspend_cmd  = 'systemctl suspend',
    -- The battery name, actually refers to its path in `/org/freedesktop/UPower/devices/`.
    -- Most devices will just have 'BAT0' for the battery.
    -- battery_name = 'BAT0',

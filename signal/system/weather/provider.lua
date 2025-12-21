@@ -195,7 +195,7 @@ local function manage_output(out)
          retries = retries + 1
          self.timer:start()
       else
-         gears.debug.print_info('Weather fetching timed out, waiting...')
+         gears.debug.print_warning('Weather fetching timed out, waiting...')
          retries = 0
       end
    else
