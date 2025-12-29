@@ -36,8 +36,9 @@ if not helpers.file_exists(user.wallpaper) then
 end
 
 if not user.lite or user.lite == nil then
-   _T.pfp       = gears.surface.load_uncached(helpers.file_exists(user.pfp) and user.pfp
-                                                or asset .. 'default/pfp.png')
+   _T.pfp = gears.surface.load_uncached(
+      helpers.file_exists(user.pfp) and user.pfp or asset .. 'default/pfp.png'
+   )
    if not _T.solid_wallpaper then
       _T.wallpaper = gears.surface.load_uncached(user.wallpaper)
    end

@@ -21,7 +21,7 @@ local function send_notif(path)
       if not helpers.dir_exists(perm_dir) then
          awful.spawn('mkdir -p ' .. perm_dir)
       end
-      awful.spawn.easy_async_with_shell('cp ' .. path .. ' ' .. perm_dir, function()
+      awful.spawn.easy_async_with_shell('mv ' .. path .. ' ' .. perm_dir, function()
          naughty.notification({
             icon    = beautiful.notification_default,
             title   = 'Screenshot',
@@ -69,13 +69,13 @@ end
 local function take_screenshot(cmd)
    local tmp = '/tmp/ss-' .. os.date('%Y%m%d-%H%M%S') .. '.png'
    awful.spawn.easy_async_with_shell(cmd .. ' ' .. tmp, function()
-      awful.spawn.with_shell('xclip -selection clip -t image/png -i ' .. tmp)
+      awful.spawn.with_shell('wl-copy < ' .. tmp)
       send_notif(tmp)
    end)
 end
 
 return {
-   screen    = function()  take_screenshot('maim')                    end,
-   selection = function()  take_screenshot('maim -s')                 end,
-   delayed   = function(s) take_screenshot('sleep ' .. s .. '; maim') end
+   screen    = function()  take_screenshot('grim')                    end,
+   selection = function()  take_screenshot('grim -g "$(slurp)"')      end,
+   delayed   = function(s) take_screenshot('sleep ' .. s .. '; grim') end
 }
