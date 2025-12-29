@@ -43,7 +43,7 @@ local function create_wday_widget(wday, col)
 			margins = dpi(10),
 			{
 				widget = wibox.widget.textbox,
-				align = "center",
+				halign = "center",
 				text = wday
 			}
 		}
@@ -158,7 +158,7 @@ local function new()
 
 	ret.day_layout = wibox.widget {
 		layout = wibox.layout.grid,
-		forced_num_cols = 7,
+		column_count = 7,
 		expand = true,
 		forced_height = dpi(230)
 	}
