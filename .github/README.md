@@ -1,6 +1,6 @@
 ![Welcome!](assets/banner.png)
 Welcome to this humble [AwesomeWM](https://awesomewm.org/) configuration that I made off
-my [modularized default rc.lua](https://github.com/Gwynsav/modular-awm-default), focused
+my [modularized default rc.lua](https://github.com/sewergweller/modular-awm-default), focused
 on being clean, simple and fast to use.
 
 > [!WARNING]
@@ -39,7 +39,7 @@ defined correctly.
 All instances of me using others' code have a link to the original at the top of the file.
 
 Groups/projects:
-- Again, my [modularized default rc.lua](https://github.com/Gwynsav/modular-awm-default).
+- Again, my [modularized default rc.lua](https://github.com/sewergweller/modular-awm-default).
 - All projects used as submodules of this one, see `module/`.
 - [Feather Icons](https://feathericons.com/). Actually, I've moved away from these and
 made my own icons for everything here. But still, I used them in the past and as
