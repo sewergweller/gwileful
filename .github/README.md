@@ -32,7 +32,7 @@ defined correctly.
 
 ## Gallery
 
-![How it looks as of 29/08/2024](assets/showcase.png)
+![How it looks as of 29/08/2024](assets/gwileful.png)
 
 ## References and Acknowledgements
 
